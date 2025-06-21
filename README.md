@@ -103,7 +103,7 @@ After training, the model is evaluated using:
 - F1 score should be greater than 80%- **0.83**
 
 - Accuracy of each class should be greater than 75%- **Accuracy table printed below**
-- 
+   
 - Overall accuracy should be greater than 80%- **82.89%**
 
 ![image](https://github.com/user-attachments/assets/f78679f4-3683-46c1-9221-05f716074cfa)
