@@ -6,7 +6,7 @@ We use a hybrid model combining **Convolutional Neural Networks (CNN)** for spat
 
 ---
 
-## 📌 Problem Statement
+## Problem Statement
 
 Understanding emotional context from speech is crucial in fields like:
 - Human-Computer Interaction (HCI)
@@ -18,7 +18,7 @@ This project uses machine learning to build a robust system that classifies **sp
 
 ---
 
-## 🗃️ Dataset – RAVDESS
+## Dataset – RAVDESS
 
 **RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song)** is a professionally recorded dataset containing:
 - **7356 audio files** (speech-only subset used here)
