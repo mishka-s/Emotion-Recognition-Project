@@ -1,6 +1,6 @@
 streamlit
-librosa
-numpy
 tensorflow
+librosa
 joblib
+numpy
 matplotlib
