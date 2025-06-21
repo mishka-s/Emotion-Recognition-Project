@@ -6,6 +6,7 @@ import numpy as np
 import tensorflow as tf
 import joblib
 import matplotlib.pyplot as plt
+import io
 
 # Load model and encoder once
 @st.cache_resource
@@ -17,13 +18,21 @@ def load_model_and_encoder():
 model, le = load_model_and_encoder()
 
 # Extract MFCC function
-def extract_features(file_path, sr=22050, n_mfcc=40, max_len=174):
-    audio, sample_rate = librosa.load(file_path, sr=sr)
+def extract_features(file, sr=22050, n_mfcc=40, max_len=174):
+    # Read bytes and decode as WAV
+    audio_bytes = file.read()
+    audio_stream = io.BytesIO(audio_bytes)
+
+    # Now load using librosa
+    audio, sample_rate = librosa.load(audio_stream, sr=sr)
+    
     mfcc = librosa.feature.mfcc(y=audio, sr=sample_rate, n_mfcc=n_mfcc).T
     if mfcc.shape[0] < max_len:
         mfcc = np.pad(mfcc, ((0, max_len - mfcc.shape[0]), (0, 0)), mode='constant')
     else:
         mfcc = mfcc[:max_len]
+    return mfcc
+c[:max_len]
     return mfcc
 
 # App UI
