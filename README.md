@@ -98,6 +98,14 @@ After training, the model is evaluated using:
 | **Classification Report**| Precision, recall, F1-score        |
 | **Per-Class Accuracy**   | Class-wise performance tracking     |
 
+### The following conditions are duly satisfied:
+
+- F1 score should be greater than 80%- **0.83**
+
+- Accuracy of each class should be greater than 75%- **Accuracy table printed below**
+- 
+- Overall accuracy should be greater than 80%- **82.89%**
+
 ![image](https://github.com/user-attachments/assets/f78679f4-3683-46c1-9221-05f716074cfa)
 
 ![image](https://github.com/user-attachments/assets/4313aeff-5a63-47ea-a76e-a4127922f420)
