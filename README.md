@@ -122,10 +122,12 @@ Before running the test script, ensure the following files are present in your p
 | `*.wav`                        | A test speech file (e.g., from RAVDESS)      |
 
 ---
-Use this command:
+### Use this command:
+
 python test_model.py path/to/audio.wav
 
-This will output:
+### This will output:
+
 Predicted Emotion: {emotion}
 
 
