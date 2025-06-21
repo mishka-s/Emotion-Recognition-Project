@@ -102,3 +102,31 @@ After training, the model is evaluated using:
 
 ![image](https://github.com/user-attachments/assets/4313aeff-5a63-47ea-a76e-a4127922f420)
 
+---
+
+## How to Test the Model on a New Audio File
+
+You can use the provided `test_model.py` script to classify the emotion from any `.wav` speech file.
+
+---
+
+### Requirements
+
+Before running the test script, ensure the following files are present in your project folder:
+
+| File                            | Purpose                                      |
+|---------------------------------|----------------------------------------------|
+| `test_model.py`                | Script to predict emotion from `.wav` file   |
+| `best_model_val_accuracy.keras`| Trained model saved during training          |
+| `label_encoder.pkl`            | Label encoder saved using `joblib.dump()`    |
+| `*.wav`                        | A test speech file (e.g., from RAVDESS)      |
+
+---
+Use this command:
+python test_model.py path/to/audio.wav
+
+This will output:
+Predicted Emotion: {emotion}
+
+
+
