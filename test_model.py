@@ -4,7 +4,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 import joblib
 
-# Load model and label encoder
+# Load model and label encoder  
 model = load_model("best_model_val_accuracy.keras")
 le = joblib.load("label_encoder.pkl")
 
