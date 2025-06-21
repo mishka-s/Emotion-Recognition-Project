@@ -33,9 +33,11 @@ def extract_features(file, sr=22050, n_mfcc=40, max_len=174):
         mfcc = mfcc[:max_len]
     return mfcc
 
-# App UI
 st.title("🎙️ Speech Emotion Recognition")
 st.write("Upload a `.wav` file of speech and this app will predict the emotion!")
+
+# 🟩 Add this line to define the file upload widget
+uploaded_file = st.file_uploader("Choose a WAV file", type="wav")
 
 if uploaded_file is not None:
     st.audio(uploaded_file, format="audio/wav")
@@ -62,5 +64,3 @@ if uploaded_file is not None:
     emotion = le.inverse_transform([predicted_class])[0]
 
     st.success(f"🧠 Predicted Emotion: **{emotion.upper()}**")
-
-
