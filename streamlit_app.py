@@ -32,8 +32,6 @@ def extract_features(file, sr=22050, n_mfcc=40, max_len=174):
     else:
         mfcc = mfcc[:max_len]
     return mfcc
-c[:max_len]
-    return mfcc
 
 # App UI
 st.title("🎙️ Speech Emotion Recognition")
