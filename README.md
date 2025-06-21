@@ -33,7 +33,7 @@ You can try the working web app here:
 
 ---
 
-You can use the provided test file: sample_audio/03-01-03-01-01-01-01.wav
+You can use the provided test file: sample_audio/03-01-03-01-01-01-03.wav
 (Which corresponds to "Happy")
 ## Dataset – RAVDESS
 
