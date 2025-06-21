@@ -25,7 +25,7 @@ def predict_emotion(file_path):
     predictions = model.predict(mfcc)
     predicted_index = np.argmax(predictions, axis=1)[0]
     predicted_label = le.inverse_transform([predicted_index])[0]
-    print(f"\n🗣️  Predicted Emotion: **{predicted_label.upper()}**")
+    print(f"\n Predicted Emotion: **{predicted_label.upper()}**")
 
 # Command-line interface
 if __name__ == "__main__":
