@@ -37,11 +37,9 @@ def extract_features(file, sr=22050, n_mfcc=40, max_len=174):
 st.title("🎙️ Speech Emotion Recognition")
 st.write("Upload a `.wav` file of speech and this app will predict the emotion!")
 
-uploaded_file = st.file_uploader("Choose a WAV file", type="wav")
-
 if uploaded_file is not None:
     st.audio(uploaded_file, format="audio/wav")
-    
+
     # Plot waveform
     audio, sr = librosa.load(uploaded_file, sr=22050)
     st.subheader("Waveform")
@@ -50,15 +48,19 @@ if uploaded_file is not None:
     ax.set_xlabel("Time")
     ax.set_ylabel("Amplitude")
     st.pyplot(fig)
-    
-    # Feature extraction
-    mfcc = extract_features(uploaded_file)
-    mfcc = mfcc[np.newaxis, ..., np.newaxis]  # Add batch and channel dims
 
-    # Prediction
+    # ✅ Reset the file pointer
+    uploaded_file.seek(0)
+
+    # Extract features
+    mfcc = extract_features(uploaded_file)
+    mfcc = mfcc[np.newaxis, ..., np.newaxis]
+
+    # Predict
     prediction = model.predict(mfcc)
     predicted_class = np.argmax(prediction, axis=1)[0]
     emotion = le.inverse_transform([predicted_class])[0]
 
     st.success(f"🧠 Predicted Emotion: **{emotion.upper()}**")
+
 
