@@ -17,7 +17,24 @@ Understanding emotional context from speech is crucial in fields like:
 This project uses machine learning to build a robust system that classifies **spoken audio into emotions** with high accuracy.
 
 ---
+## Web App Usage:
 
+You can try the working web app here:
+
+**https://mishka-singla-emotion-recognition.streamlit.app/**
+
+### How to use:
+
+- Upload any .wav file (like from RAVDESS)
+
+- Wait for the model to process it
+
+- View the predicted emotion and waveform
+
+---
+
+You can use the provided test file: sample_audio/03-01-03-01-01-01-01.wav
+(Which corresponds to "Happy")
 ## Dataset – RAVDESS
 
 **RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song)** (https://zenodo.org/record/1188976) is a professionally recorded dataset containing:
