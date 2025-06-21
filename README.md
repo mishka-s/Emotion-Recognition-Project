@@ -20,7 +20,7 @@ This project uses machine learning to build a robust system that classifies **sp
 
 ## Dataset – RAVDESS
 
-**RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song)** is a professionally recorded dataset containing:
+**RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song)** (https://zenodo.org/record/1188976) is a professionally recorded dataset containing:
 - **7356 audio files** (speech-only subset used here)
 - **24 actors** (12 male, 12 female)
 - **8 emotions**: calm, happy, sad, angry, fearful, disgust, surprised, neutral
@@ -33,17 +33,18 @@ This project uses machine learning to build a robust system that classifies **sp
 To prepare the audio for modeling, we perform:
 
 ### Step 1: Resampling
-- All audio is converted to **22,050 Hz** using `librosa`.
+- All audio is converted to **22,050 Hz** using `librosa`. This ensures uniformity and reduces computational load.
 
 ### Step 2: Feature Extraction (MFCC)
 - Extract **40 MFCC (Mel-Frequency Cepstral Coefficients)** from each audio.
-- MFCCs are padded/truncated to a uniform shape of **(174, 40)** for input to the model.
+- MFCCs are padded/truncated to 174 time steps, giving a uniform shape of **(174, 40)** for input to the model.
+- MFCCs capture timbre and spectral shape, which reflect emotion better than raw waveforms.
 
 ### Step 3: Data Augmentation
 Each training sample is expanded using:
-- **Noise injection**: Simulates real-world noise
-- **Pitch shifting**: Alters tone to simulate variability in voice
-- **Speed variation**: Simulates different speech speeds
+- **Noise injection**: Simulates real-world background noise and adds Gaussian noise to MFCCs
+- **Pitch shifting**: Alters tone to simulate variability in voice and uses np.roll on the MFCC time axis
+- **Speed variation**: Simulates different speech speeds. It helps in time-stretching and zero-padding
 
 These augmentations help improve model generalization and performance.
 
@@ -53,7 +54,7 @@ These augmentations help improve model generalization and performance.
 
 The model is designed to combine the benefits of:
 - **CNN**: For extracting spatial features from MFCCs
-- **BiLSTM**: For capturing the sequence (temporal) relationships in speech
+- **BiLSTM**: For capturing the sequence (temporal) relationships in speech 
 - **Dropout** and **Batch Normalization**: To prevent overfitting and stabilize training
 
 ## Model Pipeline
