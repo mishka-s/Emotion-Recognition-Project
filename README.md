@@ -72,13 +72,6 @@ The model is designed to combine the benefits of:
 | Dropout           | 0.5                                   |
 | Dense             | Softmax activation                    |
 
-- **Optimizer**: Adam
-- **Learning rate schedule**: CosineDecayRestarts
-- **Loss function**: Categorical Crossentropy
-- **Batch size**: 32
-- **Epochs**: 40
-- **Callbacks**: ModelCheckpoint (best `val_accuracy`)
-
 ---
 
 ## Training Strategy
@@ -104,4 +97,7 @@ After training, the model is evaluated using:
 | **Classification Report**| Precision, recall, F1-score        |
 | **Per-Class Accuracy**   | Class-wise performance tracking     |
 
+![image](https://github.com/user-attachments/assets/f78679f4-3683-46c1-9221-05f716074cfa)
+
+![image](https://github.com/user-attachments/assets/4313aeff-5a63-47ea-a76e-a4127922f420)
 
