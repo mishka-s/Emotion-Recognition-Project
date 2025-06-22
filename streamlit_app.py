@@ -36,7 +36,6 @@ def extract_features(file, sr=22050, n_mfcc=40, max_len=174):
 st.title("🎙️ Speech Emotion Recognition")
 st.write("Upload a `.wav` file of speech and this app will predict the emotion!")
 
-# 🟩 Add this line to define the file upload widget
 uploaded_file = st.file_uploader("Choose a WAV file", type="wav")
 
 if uploaded_file is not None:
@@ -51,7 +50,7 @@ if uploaded_file is not None:
     ax.set_ylabel("Amplitude")
     st.pyplot(fig)
 
-    # ✅ Reset the file pointer
+    # Reset the file pointer
     uploaded_file.seek(0)
 
     # Extract features
@@ -63,4 +62,4 @@ if uploaded_file is not None:
     predicted_class = np.argmax(prediction, axis=1)[0]
     emotion = le.inverse_transform([predicted_class])[0]
 
-    st.success(f"🧠 Predicted Emotion: **{emotion.upper()}**")
+    st.success(f" Predicted Emotion: **{emotion.upper()}**")
