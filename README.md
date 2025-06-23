@@ -21,6 +21,7 @@ This project uses machine learning to build a robust system that classifies **sp
 ## Project Directory Structure
 
 Emotion-Recognition-Project/
+
 ├── 03-01-03-01-01-01-03.wav # Sample test audio file
 
 ├── DemoVideo.webm # 2-minute demo video
@@ -48,7 +49,11 @@ You can try the working web app here:
 
 **https://mishka-singla-emotion-recognition.streamlit.app/**
 
-To run it from backend, first clone the repo in VsCode using "git clone https://github.com/mishka-s/Emotion-Recognition-Project.git" and then in the directory of the project, run "streamlit run streamlit_app.py".
+To run it from backend, first clone the repo in VsCode using 
+
+"git clone https://github.com/mishka-s/Emotion-Recognition-Project.git" and then in the directory of the project, run 
+
+"streamlit run streamlit_app.py".
 
 ### How to use:
 
