@@ -17,6 +17,22 @@ Understanding emotional context from speech is crucial in fields like:
 This project uses machine learning to build a robust system that classifies **spoken audio into emotions** with high accuracy.
 
 ---
+
+## Project Directory Structure
+
+Emotion-Recognition-Project/
+├── 03-01-03-01-01-01-03.wav # Sample test audio file
+├── DemoVideo.webm # 2-minute demo video
+├── README.md # Project overview and instructions
+├── best_model_val_accuracy.keras # Trained Keras model
+├── emotion_classifier.ipynb # Model training notebook
+├── label_encoder.pkl # Saved label encoder
+├── requirements.txt # List of required Python packages
+├── streamlit_app.py # Streamlit web app for live emotion prediction
+└── test_model.py # Script to test a .wav file via command line
+
+---
+
 ## Web App Usage:
 
 You can try the working web app here:
