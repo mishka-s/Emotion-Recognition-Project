@@ -23,6 +23,8 @@ You can try the working web app here:
 
 **https://mishka-singla-emotion-recognition.streamlit.app/**
 
+To run it from backend, first clone the repo in VsCode using "git clone  and then in the directory of the project, run streamlit run streamlit_app.py.
+
 ### How to use:
 
 - Upload any .wav file (like from RAVDESS)
