@@ -33,10 +33,17 @@ To run it from backend, first clone the repo in VsCode using "git clone https://
 
 - View the predicted emotion and waveform
 
----
-
 You can use the provided test file: sample_audio/03-01-03-01-01-01-03.wav
 (Which corresponds to "Happy")
+
+---
+## Demo Video
+
+The raw file of the demo video is uploaded in this repository itself with the file name "DemoVideo.webm".
+
+### Alternatively, you can view it using this link "https://drive.google.com/file/d/1UAt13bDsOjdWGXKm-LxqjlUWse69lQX6/view?usp=sharing".
+---
+
 ## Dataset – RAVDESS
 
 **RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song)** (https://zenodo.org/record/1188976) is a professionally recorded dataset containing:
