@@ -65,6 +65,8 @@ Each training sample is expanded using:
 
 These augmentations help improve model generalization and performance.
 
+*Please Note: Data was first split into training and validation sets. All augmentation (noise, pitch, speed) was applied only on training data to prevent information leakage*
+
 ---
 
 ## Model Architecture
